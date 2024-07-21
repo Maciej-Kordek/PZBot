@@ -16,5 +16,15 @@ namespace PZBot.Entities
 		public int id { get; set; }
 		public string Channel { get; set; }
 		public string ChannelId { get; set; }
+
+		public List<ChannelCommands> ChannelCommands { get; set; }
+
+		public static Channels GetChannel(string channelId)
+		{
+			using (var context = new Database())
+			{
+				return context.Channels.FirstOrDefault(x => x.ChannelId == channelId);
+			}
+		}
 	}
 }

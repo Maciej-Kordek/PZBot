@@ -15,7 +15,11 @@
 			Console.ForegroundColor = ConsoleColor.Blue;
 			Console.Write($" <{channel}>");
 			Console.ForegroundColor = ConsoleColor.White;
-			Console.Write($" {user}: {message}");
+			Console.WriteLine($" {user}: {message}");
+		}
+		public static void LogError()
+		{
+
 		}
 		static string TimeNow()
 		{
